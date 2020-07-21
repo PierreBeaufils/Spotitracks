@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    color: #edf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+li,
+a,
+button {
+    text-decoration: none;
+    color: #edf0f1;
+}
+
+.logo-title .logo {
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.navbar {
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.navbar li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover {
+    color: #197401;
+}
+
+.login-button button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(25, 116, 1, 1);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.login-button button:hover {
+    background-color: rgba(25, 116, 1, 0.7);
+}
+
+section {
+    color: #edf0f1;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    color: #edf0f1;
+}
+
+.top-tracks-table th {
+    padding: 40px 120px 40px 120px;
+}
+
+.artist {
+    text-align: center;
+}
+
+.top-tracks-table img {
+    width: 80px;
+    margin-right: -60px;
+}
+
+footer {
+    background-color: rgba(67, 68, 74, 1);
+}
