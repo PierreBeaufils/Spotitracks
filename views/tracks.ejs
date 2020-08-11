@@ -1,0 +1,63 @@
+<%- include('partials/header') %>
+
+<section>
+    <h2>Top Tracks</h2>
+</section>
+
+<div class="container">
+    <div class="timeRange">
+        <% if (timeRange === 'short_term') { %>
+        <a href="/tracks/top?time_range=short_term">
+            <div class="timeRange--option" style="background-color: #17855C;">Last 4 weeks</div>
+        </a>
+        <a href="/tracks/top?time_range=medium_term">
+            <div class="timeRange--option">Last 6 months</div>
+        </a>
+        <a href="/tracks/top?time_range=long_term">
+            <div class="timeRange--option">All time</div>
+        </a>
+        <% } else if (timeRange === 'long_term') { %>
+        <a href="/tracks/top?time_range=short_term">
+            <div class="timeRange--option">Last 4 weeks</div>
+        </a>
+        <a href="/tracks/top?time_range=medium_term">
+            <div class="timeRange--option">Last 6 months</div>
+        </a>
+        <a href="/tracks/top?time_range=long_term">
+            <div class="timeRange--option" style="background-color: #17855C;">All time</div>
+        </a>
+        <% } else { %>
+        <a href="/tracks/top?time_range=short_term">
+            <div class="timeRange--option">Last 4 weeks</div>
+        </a>
+        <a href="/tracks/top?time_range=medium_term">
+            <div class="timeRange--option" style="background-color: #17855C;">Last 6 months</div>
+        </a>
+        <a href="/tracks/top?time_range=long_term">
+            <div class="timeRange--option">All time</div>
+        </a>
+        <% } %>
+    </div>
+    <div class="top-artists">
+
+        <% for (const track of tracks) { %>
+
+        <div class="card--artist">
+            <a href="<%= track.external_urls.spotify %>" target="_blank">
+                <div class="card--artist-img"><img src=<%= track.album.images[1].url %>></div>
+                <div class="card--artist--text"><%= tracks.indexOf(track) + 1 %>. <%= track.name %></div>
+                <div class="card--artist--text"><%= track.artists[0].name %></div>
+            </a>
+        </div>
+
+        <% } %>
+
+    </div>
+</div>
+<footer>
+
+</footer>
+
+</body>
+
+</html>

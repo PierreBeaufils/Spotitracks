@@ -8,6 +8,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/*header*/
 header {
     color: #edf0f1;
     text-decoration: none;
@@ -62,6 +63,7 @@ button {
     background-color: rgba(25, 116, 1, 0.7);
 }
 
+/*Body*/
 section {
     color: #edf0f1;
     margin-top: 60px;
@@ -72,6 +74,8 @@ section {
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     color: #edf0f1;
 }
 
@@ -79,13 +83,69 @@ section {
     padding: 40px 120px 40px 120px;
 }
 
-.artist {
+.card--artist--text {
     text-align: center;
 }
 
 .top-tracks-table img {
-    width: 80px;
+    width: 100%;
     margin-right: -60px;
+}
+
+.timeRange {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3rem;
+}
+
+.timeRange--option {
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.timeRange--option:hover {
+    background-color: #17855C;
+}
+
+.timeRange--option a {
+    background-color: transparent;
+}
+
+.top-artists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+.card--artist {
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 2px solid #fff;
+    background-color: #17855C;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, .5);
+}
+
+.card--artist:hover {
+    transform: scale(1.02);
+}
+
+.card--artist-img {
+    margin-bottom: -5px;
+}
+
+.card--artist--text {
+    padding: 0.5rem 0 0.5rem 0;
+    background-color: #17855C;
+    text-overflow: hidden;
 }
 
 footer {
