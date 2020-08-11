@@ -11,6 +11,7 @@ router.get('/login', mainController.login);
 router.get('/callback', mainController.callback);
 router.get('/artists/top', mainController.topArtists);
 router.get('/tracks/top', mainController.topTracks);
+router.get('/logout', mainController.logout);
 
 
 

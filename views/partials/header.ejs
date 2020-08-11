@@ -19,9 +19,17 @@
             </a>
         </div>
         <ul class="navbar">
+            <% if (user) { %>
             <li><a href="/tracks/top">Top Tracks</a></li>
             <li><a href="/artists/top">Top Artists</a></li>
-            <li><a href="/account">Account</a></li>
+            <% } else { %>
+            <li><a href="/login">Top Tracks</a></li>
+            <li><a href="/login">Top Artists</a></li>
+            <% } %>
         </ul>
+        <% if (user) { %>
+        <a href="/logout" class="logout-button"><button>Logout</button></a>
+        <% } else { %>
         <a href="/login" class="login-button"><button>Login</button></a>
+        <% } %>
     </header>

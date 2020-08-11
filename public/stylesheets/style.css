@@ -63,6 +63,19 @@ button {
     background-color: rgba(25, 116, 1, 0.7);
 }
 
+.logout-button button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(139, 0, 0, 1);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.logout-button button:hover {
+    background-color: rgba(139, 0, 0, 0.7);
+}
+
 /*Body*/
 section {
     color: #edf0f1;

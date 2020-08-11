@@ -34,8 +34,7 @@ const mainController = {
     callback: (req, res) => {
         console.log('Connexion réussie');
         res.locals.code = req.query.code;
-        //spotifyApi.accessToken = res.locals.code;
-        console.log(spotifyApi.accessToken);
+
         spotifyApi.authorizationCodeGrant(res.locals.code).then(
             function (data) {
                 // Set the access token and refresh token
@@ -50,6 +49,9 @@ const mainController = {
                     Math.floor(tokenExpirationEpoch - new Date().getTime() / 1000) +
                     ' seconds!'
                 );
+
+                req.session.user = true;
+
             },
             function (err) {
                 console.log(
@@ -57,7 +59,16 @@ const mainController = {
                     err.message
                 );
             }
-        );
+        ).then(function () {
+            res.redirect('tracks/top');
+        });
+
+    },
+
+    logout: (req, res) => {
+        req.session.user = false;
+        spotifyApi.resetAccessToken();
+        spotifyApi.resetRefreshToken();
         res.redirect('/');
     },
 
@@ -95,7 +106,9 @@ const mainController = {
             }, function (err) {
                 console.log('Something went wrong!', err);
             });
-    }
+    },
+
+
 
 }
 

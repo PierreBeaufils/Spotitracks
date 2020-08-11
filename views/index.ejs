@@ -1,35 +1,18 @@
 <%- include('partials/header') %>
 
 <section>
-    Get you favorites tracks and Artists from Spotify
+    <p>Get you favorites tracks and Artists from Spotify</p>
+    <br />
+    <% if (user) { %>
+    <p>You can click on Top tracks or Top Artists to see your what you listen the most !</p>
+    <% } else { %>
+    <p>Please <a href="/login" class="login-button"><button>Login</button></a> to get informations about your listening
+        history</p>
+    <% } %>
 </section>
 
 <div class="container">
-    <table class="top-tracks-table">
-        <thead>
-            <tr>
-                <th colspan="2">Titre</th>
-                <th class="artist-head">Artiste</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><img src="/images/coveralbumtest.jpg"></td>
-                <td>Titre</td>
-                <td class="artist">Artiste</td>
-            </tr>
-            <tr>
-                <td><img src="/images/coveralbumtest.jpg"></td>
-                <td>Titre</td>
-                <td class="artist">Artiste</td>
-            </tr>
-            <tr>
-                <td><img src="/images/coveralbumtest.jpg"></td>
-                <td>Titre</td>
-                <td class="artist">Artiste</td>
-            </tr>
-        </tbody>
-    </table>
+
 </div>
 <footer>
 
