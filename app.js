@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 5000;
 
 require('dotenv').config();
 
@@ -30,4 +30,4 @@ app.use(express.urlencoded({
 app.use(router);
 
 
-app.listen(port, () => console.log(`Server running at http://localhost:${port}`))
+app.listen(PORT);
