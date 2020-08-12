@@ -162,5 +162,18 @@ section {
 }
 
 footer {
-    background-color: rgba(67, 68, 74, 1);
+    margin-top: 300px;
+}
+
+footer p {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(156, 156, 156);
+}
+
+.footer-bar {
+    height: 1px;
+    background-color: rgb(156, 156, 156);
+    width: 75%;
+    margin: auto;
 }
