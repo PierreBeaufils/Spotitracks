@@ -5,6 +5,10 @@
 
 Node.js app for tracking your favorites tracks and artists thanks to Spotify API
 
+Overview
+--------------------
+The app is online at: https://spotitracks.herokuapp.com/
+
 Installation
 --------------------
 
