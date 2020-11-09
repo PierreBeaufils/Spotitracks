@@ -3,7 +3,7 @@
  README
 ===============
 
-React application to find repositories on Github thanks to Github API
+Node.js app for tracking your favorites tracks and artists thanks to Spotify API
 
 Installation
 --------------------
