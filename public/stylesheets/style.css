@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 10%;
+    padding: 30px;
 }
 
 li,
@@ -25,6 +25,13 @@ a,
 button {
     text-decoration: none;
     color: #edf0f1;
+}
+
+.logo-title {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-title .logo {
@@ -35,6 +42,7 @@ button {
 
 .navbar {
     list-style: none;
+    text-align: center;
 }
 
 .navbar li {
@@ -79,8 +87,7 @@ button {
 /*Body*/
 section {
     color: #edf0f1;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin: 25px 0;
     text-align: center;
 }
 
@@ -100,21 +107,17 @@ section {
     text-align: center;
 }
 
-.top-tracks-table img {
-    width: 100%;
-    margin-right: -60px;
-}
-
 .timeRange {
     width: 600px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 3rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 3rem;
 }
 
 .timeRange--option {
-    padding: 1rem;
+    margin: 10px;
+    padding: 10px;
     border: 1px solid #fff;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -131,14 +134,15 @@ section {
 
 .top-artists {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     width: 75%;
 }
 
 .card--artist {
-    margin-bottom: 2rem;
+    width: 250px;
+    margin: 10px;
     border-radius: 10px;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -152,7 +156,13 @@ section {
 }
 
 .card--artist-img {
-    margin-bottom: -5px;
+    height: 200px;
+}
+
+.card--artist-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .card--artist--text {
@@ -177,4 +187,41 @@ footer p {
     background-color: rgb(156, 156, 156);
     width: 75%;
     margin: auto;
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .navbar li {
+        padding: 5 10px;
+    }
+
+    .timeRange {
+        width: 90%;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .top-artists {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .card--artist {
+        width: 150px;
+        margin: 5px;
+    }
+
+    .card--artist-img {
+        height: 100px;
+    }
+
+    .card--artist-img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
