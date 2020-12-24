@@ -142,6 +142,7 @@ section {
 
 .card--artist {
     width: 250px;
+    height: 300px;
     margin: 10px;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -169,6 +170,7 @@ section {
     padding: 0.5rem 0 0.5rem 0;
     background-color: #17855C;
     text-overflow: hidden;
+    font-size: 16px;
 }
 
 footer {
@@ -213,6 +215,8 @@ footer p {
     .card--artist {
         width: 150px;
         margin: 5px;
+        font-size: 12px;
+        height: 170px;
     }
 
     .card--artist-img {
@@ -223,5 +227,9 @@ footer p {
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+
+    .card--artist--text {
+        padding: 5px 0;
     }
 }
